@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  display: grid;
+  grid-template-columns: 20% auto 22.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1900px) {
+
+  html,
+  body {
+    font-size: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media (max-width: 1650px) {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  html,
+  body {
+    font-size: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1400px) {
+
+  html,
+  body {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+
+  html,
+  body {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  html,
+  body {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 25%;
   }
 }
