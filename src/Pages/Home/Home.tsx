@@ -17,6 +17,7 @@ const overviewCards: OverviewCardProps[] = [
       image: backgroundImage1,
       showViewAll: true,
       shadowColor: "rgba(2, 140, 213, 0.15)",
+      aspectRatio: "397 / 240",
    },
    {
       color: "rgba(122, 209, 255, 1)",
@@ -26,15 +27,17 @@ const overviewCards: OverviewCardProps[] = [
       icon: icons.overviewCard.isProgress,
       image: backgroundImage2,
       shadowColor: "rgba(101, 202, 255, 0.2)",
+      aspectRatio: "280 / 240",
    },
    {
       color: "rgba(185, 122, 255, 1)",
-      description: "Currently, the projects is in progress.",
+      description: "Completed projects",
       value: 24,
-      title: "Completed projects",
+      title: "Completed",
       icon: icons.overviewCard.completed,
       image: backgroundImage3,
       shadowColor: "rgba(173, 101, 255, 0.3)",
+      aspectRatio: "280 / 240",
    },
 ];
 
@@ -112,7 +115,7 @@ const Home: React.FC<HomeProps> = () => {
          <div className="d-flex flex-col px-15 pt-11">
             <div className="text-28 font-medium mb-4">Welcome back, Andrew!</div>
             <div className="text-lg text-gray-600 mb-6">Have a look at the Quick Progress Bar.</div>
-            <div className="grid gap-4 grid-cols-[1.3fr_1fr_1fr] mb-10">
+            <div className="grid gap-4 grid-cols-[1.4fr_1fr_1fr] mb-10">
                {overviewCards.map((x) => (
                   <OverviewCard {...x}></OverviewCard>
                ))}{" "}
