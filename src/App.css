@@ -10,6 +10,15 @@ body,
   grid-template-columns: 20% auto 22.5%;
 }
 
+.project-card {
+  aspect-ratio: 391/240;
+  height: 15rem;
+}
+
+.invoice-card {
+  aspect-ratio: 322/207;
+  height: 12.9375rem;
+}
 
 * {
   box-sizing: border-box;

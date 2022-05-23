@@ -5,6 +5,7 @@ import backgroundImage2 from "../../assets/home/Vector 1.png";
 import backgroundImage3 from "../../assets/home/Vector 1-1.png";
 import ProjectCard, { ProjectCardProps } from "./ProjectCard";
 import InvoiceCard, { InvoiceCardProps } from "./InvoiceCard";
+import CustomIcon from "../../Components/CustomIcon";
 
 interface HomeProps {}
 const overviewCards: OverviewCardProps[] = [
@@ -42,6 +43,26 @@ const overviewCards: OverviewCardProps[] = [
 ];
 
 const projectCards: ProjectCardProps[] = [
+   {
+      deadline: "25 may",
+      title: "Construction Project",
+      subtitle: "Property name",
+      minPrice: 100,
+      maxPrice: 800,
+      progress: 75,
+      vendorName: "Vendor's name",
+      img: "https://i.pinimg.com/564x/f7/6b/91/f76b91f22019b550e0848519719a03f1.jpg",
+   },
+   {
+      deadline: "25 may",
+      title: "Construction Project",
+      subtitle: "Property name",
+      minPrice: 100,
+      maxPrice: 800,
+      progress: 75,
+      vendorName: "Vendor's name",
+      img: "https://i.pinimg.com/564x/f7/6b/91/f76b91f22019b550e0848519719a03f1.jpg",
+   },
    {
       deadline: "25 may",
       title: "Construction Project",
@@ -121,20 +142,45 @@ const Home: React.FC<HomeProps> = () => {
                ))}{" "}
                s
             </div>
-            <div className="text-28 text-gray-800 font-medium mb-4">Current Projects</div>
-            <div className="text-lg text-gray-600 mb-6">Projects that are currently in progress</div>
-            <div className="grid grid-cols-2 gap-2.5 2xl:grid-cols-3 mb-10">
+            <div className="flex items-start justify-between w-full mb-6">
+               <div>
+                  <div className="text-28 text-gray-800 font-medium mb-4">Current Projects</div>
+                  <div className="text-lg text-gray-600 ">Projects that are currently in progress</div>
+               </div>
+               <div className="flex gap-4">
+                  <div className="h-14 items-center gap-3 px-6 flex border border-gray-300 rounded-md cursor-pointer">
+                     <div className="text-black text-sm">Filter</div>
+                     {icons.filter}
+                  </div>
+                  <div className="h-14 w-14 justify-center items-center flex border border-gray-300 rounded-md cursor-pointer">
+                     {icons.threeDots}
+                  </div>
+               </div>
+            </div>
+            <div className="grid gap-2.5 grid-flow-col overflow-auto pb-4 mb-10">
                {projectCards.map((x) => (
                   <ProjectCard {...x}></ProjectCard>
                ))}
             </div>
 
-            <div className="text-28 text-gray-800 font-medium mb-4">Pending Invoice</div>
-            <div className="text-lg text-gray-600 mb-6">Invoices that are currently pending</div>
-            <div className="grid grid-cols-2 gap-2.5 2xl:grid-cols-3 mb-10">
+            <div className="flex items-start justify-between w-full mb-6">
+               <div>
+                  <div className="text-28 text-gray-800 font-medium mb-4">Pending Invoice</div>
+                  <div className="text-lg text-gray-600 ">Projects that are currently in progress</div>
+               </div>
+
+               <div className="h-14 w-14 justify-center items-center flex border border-gray-300 rounded-md cursor-pointer">
+                  {icons.threeDots}
+               </div>
+            </div>
+            <div className="grid relative gap-2.5 grid-flow-col overflow-auto pb-4 mb-10">
                {invoiceCards.map((x) => (
                   <InvoiceCard {...x}></InvoiceCard>
                ))}
+               {/* <div
+                  style={{ boxShadow: "0px 10px 60px rgba(0, 0, 0, 0.15)", zIndex: 2 }}
+                  className="bg-white rounded-md  h-14 w-14 flex items-center justify-center absolute top-1/2 right-0 -translate-y-1/2"
+               ></div> */}
             </div>
          </div>
       </div>

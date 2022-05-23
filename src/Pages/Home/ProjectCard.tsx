@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
    subtitle,
 }) => {
    return (
-      <div className="flex flex-col rounded-lg border border-gray-60 py-5 px-6">
+      <div className="project-card flex flex-col rounded-lg border border-gray-60 py-5 px-6">
          <div className="text-1.5xl text-gray-900 font-semibold mb-2">{title}</div>
          <div className="text-xssm text-gray-800 mb-4">{subtitle}</div>
          <div className="flex items-center mb-4">

@@ -10,7 +10,7 @@ export interface InvoiceCardProps {
 
 const InvoiceCard: React.FC<InvoiceCardProps> = ({ amount, date, invoiceNo, status, userName, img }) => {
    return (
-      <div className="rounded-md flexflex-col py-6 px-5.5 border border-gray-60">
+      <div className="invoice-card rounded-md flexflex-col py-6 px-5.5 border border-gray-60">
          <div className="font-medium text-28 text-gray-850 mb-3">${amount.toFixed(2)}</div>
          <div className="flex justify-between items-center w-full mb-6">
             <div className="text-base text-gray-700">Amount</div>
