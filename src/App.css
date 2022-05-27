@@ -11,8 +11,7 @@ body,
 }
 
 .project-card {
-  aspect-ratio: 391/240;
-  height: 15rem;
+  width: 100%;
 }
 
 .invoice-card {

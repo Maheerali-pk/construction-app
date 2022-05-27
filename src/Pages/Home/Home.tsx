@@ -124,11 +124,11 @@ const invoiceCards: InvoiceCardProps[] = [
 const Home: React.FC<HomeProps> = () => {
    return (
       <div className="flex flex-col overflow-auto">
-         <div className="flex  w-100 items-center" style={{ minHeight: "8.5rem" }}>
+         <div className="flex h-18 w-100 items-center" style={{ minHeight: "8.5rem" }}>
             <div className="mx-15 rounded-md flex pl-8 items-center py-6 gap-7 bg-gray-400 w-full">
                {icons.search}
                <input
-                  className="h-full w-full bg-transparent text-gray-200 text-base border-none outline-none"
+                  className=" w-full bg-transparent text-gray-200 text-base border-none outline-none"
                   placeholder="Search for projects"
                ></input>
             </div>
@@ -140,7 +140,6 @@ const Home: React.FC<HomeProps> = () => {
                {overviewCards.map((x) => (
                   <OverviewCard {...x}></OverviewCard>
                ))}{" "}
-               s
             </div>
             <div className="flex items-start justify-between w-full mb-6">
                <div>
@@ -157,7 +156,7 @@ const Home: React.FC<HomeProps> = () => {
                   </div>
                </div>
             </div>
-            <div className="grid gap-2.5 grid-flow-col overflow-auto pb-4 mb-10">
+            <div style={{ gridAutoColumns: "40%" }} className="grid gap-2.5 grid-flow-col overflow-auto pb-4 mb-10">
                {projectCards.map((x) => (
                   <ProjectCard {...x}></ProjectCard>
                ))}
