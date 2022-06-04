@@ -49,13 +49,13 @@ const Sidebar: React.FC<SidebarProps> = () => {
                <SidebarItem {...x}></SidebarItem>
             ))}
          </div>
-         <div className="text-sm font-medium my-9 ml-12 ">Settings</div>
+         <div className="text-sm font-medium my-9 ml-12 md:hidden ">Settings</div>
          <div className="md:hidden flex flex-col px-5 md:px-0">
             {sidebarItems3.map((x) => (
                <SidebarItem {...x}></SidebarItem>
             ))}
          </div>
-         <div className="items-end flex-grow flex">
+         <div className="items-end flex-grow flex md:hidden">
             <div className="flex w-full h-32.5 items-center mx-6  border-t border-gray-500">
                <img
                   className="h-16 w-16 rounded-full object-cover mr-5"
