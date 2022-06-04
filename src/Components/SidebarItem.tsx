@@ -9,14 +9,31 @@ export interface SidebarItemProps {
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ text, isSelected, icon, badgeValue }) => {
    return (
-      <div className="flex h-16 items-center pr-7 cursor-pointer">
-         <div className={cx("h-full bg-sky-400 w-2.125 mr-10 rounded-r-md", { invisible: !isSelected })}></div>
-         <div className={cx("icon mr-6", { "text-sky-400": isSelected, "text-graymain": !isSelected })}>{icon}</div>
+      <div
+         className={cx("flex h-16 items-center pr-7 md:bg-transparent cursor-pointer rounded-md md:rounded-none", {
+            "bg-sky-400": isSelected,
+         })}
+      >
+         <div
+            className={cx("invisible md:visible  h-full bg-sky-400 w-2.125 mr-5 md:mr-10 rounded-r-md", {
+               "md:invisible": !isSelected,
+            })}
+         ></div>
+         <div
+            className={cx("icon mr-6", {
+               "md:text-sky-400": isSelected,
+               "text-graymain": !isSelected,
+               "text-white": isSelected,
+            })}
+         >
+            {icon}
+         </div>
          <div
             className={cx("flex-grow text-lg", {
                "font-medium": isSelected,
-               "text-sky-400": isSelected,
+               "md:text-sky-400": isSelected,
                "text-graymain": !isSelected,
+               "text-white": isSelected,
             })}
          >
             {text}

@@ -2,6 +2,10 @@ module.exports = {
    content: ["./src/**/*.tsx"],
    theme: {
       extend: {
+         gridAutoColumns: {
+            "40%": "40%",
+            "80%": "80%",
+         },
          colors: {
             graymain: "rgba(28, 48, 74, 0.5)",
             sidebarBorder: "rgba(28, 55, 90, 0.16)",
@@ -14,6 +18,7 @@ module.exports = {
 
                300: "rgba(237, 237, 237, 1)",
                400: "rgba(246, 246, 246, 1)",
+               500: "rgba(226, 226, 226, 1)",
                600: "rgba(110, 111, 125, 1)",
                700: "rgba(26, 41, 61, 0.83)",
                800: "rgba(24, 39, 58, 0.94)",

@@ -1,9 +1,13 @@
 import React from "react";
 import { createCustomContext } from "../utils/CreateCustomContext";
 
-interface IGlobalState {}
+interface IGlobalState {
+   showSidebar?: boolean;
+}
 
-const initialState: IGlobalState = {};
+const initialState: IGlobalState = {
+   showSidebar: false,
+};
 
 function setState(state: IGlobalState, newState: Partial<IGlobalState>): IGlobalState {
    return { ...state, ...newState };

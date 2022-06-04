@@ -56,7 +56,7 @@ const activityItems: ActivityItemProps[] = [
 ];
 const RightSidebar: React.FC<RightSidebarProps> = () => {
    return (
-      <div className="flex flex-col w-full h-full bg-gray-50 overflow-auto">
+      <div className="md:flex flex-col w-full h-full bg-gray-50 overflow-auto hidden">
          <div className="flex w-full h-32.5 items-center p-9">
             <img
                className="h-16 w-16 rounded-full object-cover mr-5"
